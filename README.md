@@ -4,4 +4,9 @@
 
 
 DTO -Data transfer object  (đối tượng truyền dữ liệu). DTO có thể chứa tất cả các dữ liệu hoặc 1 phần tài liệu. Khi được triển khai, DTO sẽ trở thành phương tiện 
-truyền dữ liệu giữa các hệ thố .
+truyền dữ liệu giữa các hệ thống. 
+
+
+```php
+ 
+```

@@ -1,25 +1,17 @@
 <?php
+
 use vendor\src\User;
 
-spl_autoload_register(function ($classname){
-    $pathfile = __DIR__ . DIRECTORY_SEPARATOR . str_replace("\\","/",$classname). ".php";
-    if(file_exists($pathfile))
-    {
-        include $pathfile;
-    }
-
-});
+include 'vendor/autoload.php';
 
 $array = [
-    ['name' => 'Nguyễn Gia Hào','age' => '23', 'email' => 'giahao9899@gmail.com', 'phone' => '01283180231'],
-    ['name' => 'VNP Group','age' => '15', 'email' => 'vnp@gmail.com', 'phone' => '01283180231'],
-    ['name' => 'MinhHN','age' => '21', 'email' => 'nhatminh7721@gmail.com', 'phone' => '0943199776'],
-    ['name' => 'Phong','age' => '19', 'email' => 'phong@gmail.com', 'phone' => '0348203434'],
-    ['name' => 'Hưng','age' => '21', 'email' => 'hung@gmail.com', 'phone' => '04394802384'],
-    ['name' => 'Đăng','age' => '20', 'email' => 'dang@gmail.com', 'phone' => '10230121'],
-    ['name' => 'Chiến','age' => '22', 'email' => 'chien@gmail.com', 'phone' => '34230429834'],
+    ['name' => "Nguyen Gia Hao ", 'age' => 24, 'address' => 'Ha Noi'],
+    ['name' => "Nguyen Van A", 'age' => 18, 'address' => 'Nam Dinh'],
+    ['name' => 'Vu Van A', 'age' => 20, 'address' => 'Thai Binh'],
+    ['name' => 'Le van Chien', 'age' => 22, 'address' => "Hai Phong"]
 ];
 
-$user = User::from($array);
+$user = User::from(['name' => 'Vu Van Nghia', 'email' => 'nghiavuxp0202@gmail.com']);
+$user->name = "Nguyen Gia Hao";
 $book = \vendor\src\Book::collection($array);
 print_r($book->all());
